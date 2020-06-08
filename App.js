@@ -1,25 +1,12 @@
-import React, { component, useState } from "react";
-import Icon from "react-native-vector-icons/FontAwesome";
-
-import {
-  StyleSheet,
-  SafeAreaView,
-  TouchableOpacity,
-  Text,
-  View,
-  Image,
-  Button,
-  Alert,
-} from "react-native";
+import React from 'react';
 
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ContactScreen from './app/screens/ContactScereen';
 
-export default function App() {
-  const [count, setCount] = useState(0);
-  const handleInc = () => setCount((prevCount) => prevCount + 1);
-  const handleDec = () => setCount((prevCount) => prevCount - 1);
-
-  return (
-      <WelcomeScreen />
-  );
+export default class App extends React.Component{
+    render() {
+      return (
+        <ContactScreen/>
+    );
+  }
 }

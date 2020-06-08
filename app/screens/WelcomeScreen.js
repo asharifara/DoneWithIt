@@ -3,20 +3,22 @@ import { StyleSheet, ImageBackground, View, Text, Button, Image } from 'react-na
 
 import colors from '../config/colors';
 
-export default function WelcomeScreen() {
-    return (
-        <ImageBackground 
-            resizeMode="contain"
-            style={styles.background} 
-            source={require("../assets/bg.jpg")} 
-        >
-            <Image style={styles.logo} source={require('../assets/logo.png')} />
-            <Text style={styles.welcomeText}>Buy goods and sell what you don't need! </Text>
-            <Text style={styles.joinText}>It's a free app! what are you waiting for? Join us Now!</Text>
-            <View style={styles.loginButton}><Button color="#fff" title='Register'></Button></View>
-            <View style={styles.registerButton}><Button color="#fff" title='Login'></Button></View>
-        </ImageBackground>
-    );
+export default class WelcomeScreen extends React.Component {
+    render() {
+        return (
+            <ImageBackground 
+                resizeMode="contain"
+                style={styles.background} 
+                source={require("../assets/bg.jpg")} 
+            >
+                <Image style={styles.logo} source={require('../assets/logo.png')} />
+                <Text style={styles.welcomeText}>Buy goods and sell what you don't need! </Text>
+                <Text style={styles.joinText}>It's a free app! what are you waiting for? Join us Now!</Text>
+                <View style={styles.loginButton}><Button color="#fff" title='Register'></Button></View>
+                <View style={styles.registerButton}><Button color="#fff" title='Login'></Button></View>
+            </ImageBackground>
+        );
+    }
 }
 const styles = StyleSheet.create({
     background: {
